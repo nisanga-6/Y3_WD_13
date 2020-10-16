@@ -1,0 +1,55 @@
+
+
+ul, #myUL {
+  list-style-type: none;
+ 
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+  
+ 
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  font-size:20px;
+  font-weight:bold;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+.active, .caret:hover {
+  color: red;
+}
+.caret::before {
+  ucontent: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+
+}
+
+.caret-down::before {
+ 
+  transform: rotate(90deg);  
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.nested {
+  display: none;
+  font-size:14px;
+   font-style: italic;
+   opacity: 0.8;
+   border-left: 2px solid rgba(128, 4, 77, 0.3);
+           
+}
+
+.active {
+  display: block;
+}
